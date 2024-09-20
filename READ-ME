@@ -1,0 +1,27 @@
+This repository consists of notes and code I did while I interned with Teachnook Edtech Bangalore as an AI Intern. Source code will be added shortly and referenced at required areas.
+
+> Supervised Learning : Machine model trained on labelled dataset. --> Un Supervised Learning : Machine model trained on unlabelled dataset. Discover the hidden structures and relationships in the data. --> Reinforced Learning : Agent learns to increase cumulative rewards / feedback. --> Deep Learning : In depth learning facilitated by artificial neural networks.
+
+Supervised Classification Model : A trained (labelled) set is tested with the help of a test set (input) & then classified into two or more classes (targets). Eg) Spam Email Detector --> Classifier classifies the test data. --> Binary classifier Classifies into two classes. --> Multi-Class Classifier classifies into more than two classes.
+
+Clustering Involves grouping objects with most similarities into one group and less or no similarities to the other group. Association involves finding relationship between variables in a large dataset.Determines set of item that should occur in one set.
+
+K Means Clustering Working : For each list value of main dataset ( here we have 4 values each), the algorithm detects similarities and classifies each 4 as a type. The number of types is specified by us in the cluster function, and repeats the number when it sees the similarity in other the rest of the data (same type, same number).
+
+Mat plot lib working : First we take only values for the first two values (sepal length(0) and sepal width(1)). Then we check each of this value with its corresponding value in the label (type) and it is plotted with that type. Each type is given one colour by the viridis function according to the label (C= label) assigned to it by the algorithm.
+
+The center has the mean values of the main data types for each cluster it has made. For the above table we take and directly plot the first and second value and mark them with X, this denotes the center of each cluster.
+
+Deep Learning / Neural Networks : Involves thinking like a human to find solutions etc. Example is driverless cars, It requires large number of labelled datasets for proper functioning.
+
+First, we must define architecture of neural network, number of layers, number of neurons in each layer etc. Then Propogation, data is fed and computed layer by layer, final output layer gives predicted output. The accuracy of this output is compared to the true output and is called loss function. Then Backpropogation occurs, it calculates the gradients required which give the direction for optimization which in turn result in minimised loss function with help of chain rule of calculus and is back propogated. Then it is optimized with the calculated gradients and is continously trained in the above manner.
+
+CNN - Convolutional Neural Networks : Deep learning model that learns directly in data specializing in processing and analysis of visual data. Finds patterns in visual data. Used in Computer vision - Image/Object detection etc. Filters added as thousands of layers extracting the features from the image varying from basic features like brightness to other aspects which define that image. Pooling layers downsample the feature maps reducing complexity of computations.
+
+1) Convolutional Layer : It's output is a feature map which extracts & highlights certain features of the image. The kernals (learnable filters) apply dot products and obtain the feature maps.
+
+2) Max Pooling Layers : Obtains the feature map and reduces the dimensions of the feature map and makes the new layer more robust and clear. it retains the maximum value from each pooling layer.
+
+3) Activation Function :Activation function helps in establishing the model computational relation between input and output. Rectified Linear Unit (Relu) makes the image computationallly efficient and prevents vanishing of gradient. It changes the negative values to 0 and the others unchanged. Sigmoid is another activation function giving 0 or 1 output, but it suffers from vanishing gradient problem. It brings linearity in the data.
+
+Sentiment Analysis using NLP techniques and RNN : This enables the program to understand the sentiment associated with a input given to the model. Classified into Positive, Negative, Neutral.
