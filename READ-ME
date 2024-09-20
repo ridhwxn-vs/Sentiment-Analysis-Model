@@ -1,27 +1,96 @@
-This repository consists of notes and code I did while I interned with Teachnook Edtech Bangalore as an AI Intern. Source code will be added shortly and referenced at required areas.
+## AI Internship Notes - Teachnook Edtech Bangalore
 
-> Supervised Learning : Machine model trained on labelled dataset. --> Un Supervised Learning : Machine model trained on unlabelled dataset. Discover the hidden structures and relationships in the data. --> Reinforced Learning : Agent learns to increase cumulative rewards / feedback. --> Deep Learning : In depth learning facilitated by artificial neural networks.
+### Overview
+This repository consists of notes and code compiled during my internship at Teachnook Edtech, Bangalore as an AI Intern. The source code will be added shortly and referenced where required.
 
-Supervised Classification Model : A trained (labelled) set is tested with the help of a test set (input) & then classified into two or more classes (targets). Eg) Spam Email Detector --> Classifier classifies the test data. --> Binary classifier Classifies into two classes. --> Multi-Class Classifier classifies into more than two classes.
+---
 
-Clustering Involves grouping objects with most similarities into one group and less or no similarities to the other group. Association involves finding relationship between variables in a large dataset.Determines set of item that should occur in one set.
+### Key Concepts in Machine Learning
 
-K Means Clustering Working : For each list value of main dataset ( here we have 4 values each), the algorithm detects similarities and classifies each 4 as a type. The number of types is specified by us in the cluster function, and repeats the number when it sees the similarity in other the rest of the data (same type, same number).
+- **Supervised Learning**:  
+  A machine learning model is trained on a labeled dataset where input and output pairs are provided.
 
-Mat plot lib working : First we take only values for the first two values (sepal length(0) and sepal width(1)). Then we check each of this value with its corresponding value in the label (type) and it is plotted with that type. Each type is given one colour by the viridis function according to the label (C= label) assigned to it by the algorithm.
+- **Unsupervised Learning**:  
+  The model is trained on an unlabeled dataset. The goal is to discover hidden patterns, structures, or relationships in the data.
 
-The center has the mean values of the main data types for each cluster it has made. For the above table we take and directly plot the first and second value and mark them with X, this denotes the center of each cluster.
+- **Reinforcement Learning**:  
+  An agent learns through feedback from its environment, aiming to maximize cumulative rewards.
 
-Deep Learning / Neural Networks : Involves thinking like a human to find solutions etc. Example is driverless cars, It requires large number of labelled datasets for proper functioning.
+- **Deep Learning**:  
+  A branch of machine learning that involves neural networks with multiple layers, enabling models to learn complex patterns.
 
-First, we must define architecture of neural network, number of layers, number of neurons in each layer etc. Then Propogation, data is fed and computed layer by layer, final output layer gives predicted output. The accuracy of this output is compared to the true output and is called loss function. Then Backpropogation occurs, it calculates the gradients required which give the direction for optimization which in turn result in minimised loss function with help of chain rule of calculus and is back propogated. Then it is optimized with the calculated gradients and is continously trained in the above manner.
+---
 
-CNN - Convolutional Neural Networks : Deep learning model that learns directly in data specializing in processing and analysis of visual data. Finds patterns in visual data. Used in Computer vision - Image/Object detection etc. Filters added as thousands of layers extracting the features from the image varying from basic features like brightness to other aspects which define that image. Pooling layers downsample the feature maps reducing complexity of computations.
+### Supervised Classification Model
+- **Definition**: A model is trained using labeled data and tested using a test set. The model then classifies data into one or more classes.
+  
+- **Types**:
+  - **Binary Classifier**: Classifies data into two categories.  
+    _Example_: Spam Email Detector.
+  - **Multi-Class Classifier**: Classifies data into more than two categories.
 
-1) Convolutional Layer : It's output is a feature map which extracts & highlights certain features of the image. The kernals (learnable filters) apply dot products and obtain the feature maps.
+---
 
-2) Max Pooling Layers : Obtains the feature map and reduces the dimensions of the feature map and makes the new layer more robust and clear. it retains the maximum value from each pooling layer.
+### Unsupervised Learning Models
 
-3) Activation Function :Activation function helps in establishing the model computational relation between input and output. Rectified Linear Unit (Relu) makes the image computationallly efficient and prevents vanishing of gradient. It changes the negative values to 0 and the others unchanged. Sigmoid is another activation function giving 0 or 1 output, but it suffers from vanishing gradient problem. It brings linearity in the data.
+#### Clustering:
+- Groups objects with similar characteristics into one cluster, and objects with dissimilar characteristics into another.
 
-Sentiment Analysis using NLP techniques and RNN : This enables the program to understand the sentiment associated with a input given to the model. Classified into Positive, Negative, Neutral.
+#### Association:
+- Identifies relationships between variables in large datasets, determining which items tend to occur together.
+
+---
+
+### K-Means Clustering
+- **Working**: The algorithm assigns each data point to a cluster based on similarity. We specify the number of clusters, and the algorithm repeats this assignment process, finding patterns.
+
+---
+
+### Data Visualization with Matplotlib
+
+- **Usage**:  
+  Plots data (e.g., sepal length and width) according to labels assigned by the algorithm. Each label (type) is represented by a color using the `viridis` function.
+
+- **Centers of Clusters**:  
+  The center (mean) of each cluster is marked on the plot with an 'X', indicating the average values of the data points in that cluster.
+
+---
+
+### Deep Learning & Neural Networks
+
+- **Overview**:  
+  Neural networks aim to mimic human thinking to solve complex problems.  
+  _Example_: Driverless cars require large labeled datasets for accurate performance.
+
+- **Process**:
+  1. **Architecture Definition**: Specify the number of layers and neurons.
+  2. **Forward Propagation**: Data is passed through layers to make predictions.
+  3. **Loss Function**: Measures the accuracy of predictions compared to actual values.
+  4. **Backpropagation**: Calculates gradients and adjusts weights to minimize the loss.
+  5. **Optimization**: Uses gradients to continuously improve the model’s performance.
+
+---
+
+### Convolutional Neural Networks (CNN)
+
+- **Purpose**:  
+  CNNs are deep learning models specialized for processing and analyzing visual data (e.g., images). They detect patterns such as edges, textures, and shapes.
+
+- **Key Components**:
+  1. **Convolutional Layer**:  
+     Extracts features from images using filters (kernels) that apply dot products to form feature maps.
+  
+  2. **Max Pooling Layer**:  
+     Reduces the dimensionality of feature maps, making the model more efficient while retaining essential features.
+  
+  3. **Activation Function**:
+     - **ReLU (Rectified Linear Unit)**: Enhances computational efficiency by converting negative values to 0, while leaving positive values unchanged.  
+     - **Sigmoid**: Outputs values between 0 and 1 but suffers from the vanishing gradient problem.
+
+---
+
+### Sentiment Analysis Using NLP and RNN
+
+- **Definition**:  
+  Sentiment analysis uses natural language processing (NLP) techniques and Recurrent Neural Networks (RNN) to understand the sentiment (positive, negative, or neutral) of an input text.
+
